@@ -1,0 +1,95 @@
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 50px;
+    column-gap: 80px;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.card {
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 51px 13px rgba(148,187,233,1);
+    -moz-box-shadow: 0px 0px 51px 13px rgba(148,187,233,1);
+    box-shadow: 0px 0px 51px 13px rgba(148,187,233,1);
+}
+
+.card:hover {
+    background-color: rgba(148,187,233,1);
+    -webkit-box-shadow: 0px 0px 26px 44px rgba(148,187,233,1);
+    -moz-box-shadow: 0px 0px 26px 44px rgba(148,187,233,1);
+    box-shadow: 0px 0px 26px 44px rgba(148,187,233,1);
+}
+
+#completion-div {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+#completion-msg {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#replay-btn {
+    cursor: pointer;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }

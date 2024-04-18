@@ -1,0 +1,19 @@
+.card {
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgba(148,187,233,1);
+}
+
+.card-img {
+    height: 200px;
+    aspect-ratio: 1/1;
+}
