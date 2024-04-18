@@ -6,7 +6,7 @@ import BestScore from './BestScore'
 
 function App() {
     const [count, setCount] = useState(0);
-    const [bestScore, setBestScore] = useState(JSON.parse(localStorage.getItem('bestScore')));
+    const [bestScore, setBestScore] = useState(JSON.parse(localStorage.getItem('bestScore')) || 0);
 
     function handleCount() {
         setCount(count + 1);
